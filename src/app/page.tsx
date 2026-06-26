@@ -2571,7 +2571,7 @@ export default function Home() {
     <main className="pageShell">
       <header className="simpleHeader">
         <div>
-          <p>クロール: {crawledAt}</p>
+          <p>last update: {crawledAt}</p>
           <h1>ハリー・ポッター舞台 日別販売状況</h1>
         </div>
         <nav aria-label="確認リンク">
