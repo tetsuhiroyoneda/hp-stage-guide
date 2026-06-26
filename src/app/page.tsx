@@ -1060,13 +1060,13 @@ const dailyRows: DailyRow[] = [
 const seatTypes = ["SS席", "Sプラス席", "S席", "A席", "B席", "C席", "9と4分の3番線シート"];
 
 const seatPrices: Record<string, { weekday: string; holiday: string }> = {
-  "SS席": { weekday: "¥17000", holiday: "¥19000" },
-  "Sプラス席": { weekday: "¥16000", holiday: "¥17000" },
-  "S席": { weekday: "¥15000", holiday: "¥16000" },
-  "A席": { weekday: "¥13000", holiday: "¥14000" },
-  "B席": { weekday: "¥11000", holiday: "¥12000" },
-  "C席": { weekday: "¥7000", holiday: "¥7000" },
-  "9と4分の3番線シート": { weekday: "¥20000", holiday: "¥22000" },
+  "SS席": { weekday: "¥17,000", holiday: "¥19,000" },
+  "Sプラス席": { weekday: "¥16,000", holiday: "¥17,000" },
+  "S席": { weekday: "¥15,000", holiday: "¥16,000" },
+  "A席": { weekday: "¥13,000", holiday: "¥14,000" },
+  "B席": { weekday: "¥11,000", holiday: "¥12,000" },
+  "C席": { weekday: "¥7,000", holiday: "¥7,000" },
+  "9と4分の3番線シート": { weekday: "¥20,000", holiday: "¥22,000" },
 };
 
 const seatAvailability: Record<string, Record<string, boolean>> = {
