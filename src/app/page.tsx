@@ -1347,6 +1347,16 @@ const otherCastMonths: OtherCastMonth[] = [
 
 const seatTypes = ["SS席", "Sプラス席", "S席", "A席", "B席", "C席", "9と4分の3番線シート"];
 
+const seatPrices: Record<string, string> = {
+  "SS席": "平17,000 / 休19,000",
+  "Sプラス席": "平16,000 / 休17,000",
+  "S席": "平15,000 / 休16,000",
+  "A席": "平13,000 / 休14,000",
+  "B席": "平11,000 / 休12,000",
+  "C席": "7,000",
+  "9と4分の3番線シート": "平20,000 / 休22,000",
+};
+
 const seatAvailability: Record<string, Record<string, boolean>> = {
   "2026-09-02-12:15": {
     "SS席": false,
@@ -2592,7 +2602,10 @@ export default function Home() {
                 <th>開演</th>
                 <th>キャスト</th>
                 {seatTypes.map((seat) => (
-                  <th key={seat}>{seat}</th>
+                  <th key={seat}>
+                    <span className="seatName">{seat}</span>
+                    <small>{seatPrices[seat]}</small>
+                  </th>
                 ))}
               </tr>
             </thead>
