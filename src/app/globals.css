@@ -350,26 +350,114 @@ summary {
 }
 
 @media (max-width: 900px) {
+  body {
+    overflow: hidden;
+  }
+
   .pageShell {
+    display: flex;
+    height: 100dvh;
+    flex-direction: column;
     width: min(100% - 20px, 1480px);
-    padding-top: 156px;
+    overflow: hidden;
+    padding: 130px 0 10px;
   }
 
   .simpleHeader {
     align-items: stretch;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+    padding: 12px 10px;
+  }
+
+  .simpleHeader h1 {
+    font-size: 1.32rem;
   }
 
   .simpleHeader nav {
     justify-content: flex-start;
   }
 
+  .simpleHeader a {
+    min-height: 36px;
+    padding: 7px 10px;
+    font-size: 0.82rem;
+  }
+
+  .monthSwitcher {
+    flex: 0 0 auto;
+    gap: 16px;
+    margin: 8px 0 10px;
+  }
+
+  .monthSwitcher button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .monthSwitcher strong {
+    min-width: 68px;
+    font-size: 1rem;
+  }
+
+  .tableSection {
+    min-height: 0;
+    flex: 1 1 auto;
+  }
+
   .tableWrap {
-    max-height: calc(100vh - 12px);
+    height: 100%;
+    max-height: none;
   }
 
   .scheduleTable {
-    min-width: 860px;
+    min-width: 760px;
+  }
+
+  .scheduleTable th {
+    padding: 9px 10px;
+    font-size: 0.74rem;
+  }
+
+  .scheduleTable th small {
+    font-size: 0.58rem;
+  }
+
+  .scheduleTable td {
+    padding: 8px 10px;
+    font-size: 0.86rem;
+  }
+
+  .scheduleTable td:nth-child(1) {
+    width: 88px;
+  }
+
+  .scheduleTable td:nth-child(2) {
+    width: 70px;
+  }
+
+  .scheduleTable td:nth-child(3) {
+    width: 116px;
+  }
+
+  .castDetails summary {
+    min-height: 30px;
+    padding: 0 8px;
+    font-size: 0.78rem;
+  }
+
+  .seatMark {
+    width: 58px;
+  }
+
+  .seatMark .mi {
+    font-size: 1rem;
+  }
+
+  .pageFooter {
+    flex: 0 0 auto;
+    padding-top: 8px;
+    font-size: 0.66rem;
+    text-align: center;
   }
 }
