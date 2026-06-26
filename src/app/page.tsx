@@ -2372,7 +2372,10 @@ export default function Home() {
           </table>
         </div>
       </section>
-      <footer className="pageFooter">last update: {crawledAt}</footer>
+      <footer className="pageFooter">
+        <p>※正確な情報は公式サイト、チケット販売サイトを参照してください</p>
+        <p>last update: {crawledAt}</p>
+      </footer>
     </main>
   );
 }

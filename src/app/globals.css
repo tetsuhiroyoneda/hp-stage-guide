@@ -359,6 +359,14 @@ summary {
   text-align: right;
 }
 
+.pageFooter p {
+  margin: 0;
+}
+
+.pageFooter p + p {
+  margin-top: 4px;
+}
+
 @media (max-width: 900px) {
   body {
     overflow: hidden;
