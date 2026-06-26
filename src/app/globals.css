@@ -279,11 +279,7 @@ summary {
   line-height: 1.2;
 }
 
-.castDetails {
-  position: relative;
-}
-
-.castDetails summary {
+.castButton {
   display: inline-flex;
   min-height: 32px;
   cursor: pointer;
@@ -297,43 +293,6 @@ summary {
   font-weight: 900;
   list-style: none;
   white-space: nowrap;
-}
-
-.castDetails summary::-webkit-details-marker {
-  display: none;
-}
-
-.castPanel {
-  position: static;
-  z-index: 8;
-  display: none;
-  width: min(280px, 58vw);
-  max-height: none;
-  overflow: visible;
-  margin-top: 8px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 12px;
-  background: var(--background);
-}
-
-.castDetails[open] .castPanel,
-.castDetails:hover .castPanel {
-  display: grid;
-  gap: 8px;
-}
-
-.castPanel p {
-  display: grid;
-  grid-template-columns: 72px 1fr;
-  gap: 10px;
-  margin: 0;
-  color: var(--foreground);
-  font-size: 0.82rem;
-}
-
-.castPanel b {
-  color: var(--gold);
 }
 
 .seatMark {
@@ -375,6 +334,84 @@ summary {
 
 .pageFooter p + p {
   margin-top: 4px;
+}
+
+.castModalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: color-mix(in srgb, var(--background) 78%, transparent);
+}
+
+.castModal {
+  width: min(420px, 100%);
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.castModalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 2px solid var(--line);
+  padding: 16px;
+}
+
+.castModalHeader p,
+.castModalHeader h2 {
+  margin: 0;
+}
+
+.castModalHeader p {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.castModalHeader h2 {
+  margin-top: 4px;
+  color: var(--gold);
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.castModalHeader button {
+  display: inline-flex;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid color-mix(in srgb, var(--line) 48%, transparent);
+  border-radius: 6px;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.castModalBody {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+}
+
+.castModalBody p {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.castModalBody b {
+  color: var(--gold);
 }
 
 @media (max-width: 900px) {
@@ -469,7 +506,7 @@ summary {
     left: 82px;
   }
 
-  .castDetails summary {
+  .castButton {
     min-height: 30px;
     padding: 0 8px;
     font-size: 0.78rem;

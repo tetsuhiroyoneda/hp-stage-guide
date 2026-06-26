@@ -2283,6 +2283,7 @@ function getPriceType(date: string) {
 
 export default function Home() {
   const [selectedMonth, setSelectedMonth] = useState(months[0]);
+  const [selectedCastRow, setSelectedCastRow] = useState<DailyRow | null>(null);
   const monthIndex = months.indexOf(selectedMonth);
   const visibleRows = dailyRows.filter((row) => row.month === selectedMonth);
   const previousMonth = months[monthIndex - 1];
@@ -2354,16 +2355,9 @@ export default function Home() {
                       <small>{row.time}</small>
                     </td>
                     <td>
-                      <details className="castDetails">
-                        <summary>{row.harry}</summary>
-                        <div className="castPanel">
-                          {getDailyCasts(row).map((cast) => (
-                            <p key={row.date + row.time + cast.role}>
-                              <b>{cast.role}</b>{cast.names.join(" / ")}
-                            </p>
-                          ))}
-                        </div>
-                      </details>
+                      <button type="button" className="castButton" onClick={() => setSelectedCastRow(row)}>
+                        {row.harry}
+                      </button>
                     </td>
                     {seatTypes.map((seat) => {
                       const available = seats[seat] === true;
@@ -2386,6 +2380,35 @@ export default function Home() {
         <p>※正確な情報は公式サイト、チケット販売サイトを参照してください</p>
         <p>last update: {crawledAt}</p>
       </footer>
+      {selectedCastRow ? (
+        <div className="castModalBackdrop" role="presentation" onClick={() => setSelectedCastRow(null)}>
+          <section
+            className="castModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="cast-modal-title"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="castModalHeader">
+              <div>
+                <p>{selectedCastRow.dateLabel} {selectedCastRow.time}</p>
+                <h2 id="cast-modal-title">キャスト</h2>
+              </div>
+              <button type="button" onClick={() => setSelectedCastRow(null)} aria-label="閉じる">
+                <span className="mi" aria-hidden="true">close</span>
+              </button>
+            </div>
+            <div className="castModalBody">
+              {getDailyCasts(selectedCastRow).map((cast) => (
+                <p key={selectedCastRow.date + selectedCastRow.time + cast.role}>
+                  <b>{cast.role}</b>
+                  <span>{cast.names.join(" / ")}</span>
+                </p>
+              ))}
+            </div>
+          </section>
+        </div>
+      ) : null}
     </main>
   );
 }
