@@ -188,7 +188,7 @@ summary {
 
 .scheduleTable tr.isSold td {
   background: var(--sold-bg);
-  color: #595959;
+  color: #222222;
 }
 
 .scheduleTable tr.isWeekend td {
