@@ -252,7 +252,7 @@ summary {
   position: sticky;
   left: 100px;
   z-index: 4;
-  width: 150px;
+  width: 130px;
   background: var(--paper);
 }
 
@@ -505,7 +505,7 @@ summary {
 
   .scheduleTable td:nth-child(2) {
     left: 82px;
-    width: 108px;
+    width: 96px;
   }
 
   .scheduleTable th:nth-child(2) {
