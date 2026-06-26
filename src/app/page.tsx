@@ -1347,14 +1347,14 @@ const otherCastMonths: OtherCastMonth[] = [
 
 const seatTypes = ["SS席", "Sプラス席", "S席", "A席", "B席", "C席", "9と4分の3番線シート"];
 
-const seatPrices: Record<string, string> = {
-  "SS席": "平17,000 / 休19,000",
-  "Sプラス席": "平16,000 / 休17,000",
-  "S席": "平15,000 / 休16,000",
-  "A席": "平13,000 / 休14,000",
-  "B席": "平11,000 / 休12,000",
-  "C席": "7,000",
-  "9と4分の3番線シート": "平20,000 / 休22,000",
+const seatPrices: Record<string, { weekday: string; holiday: string }> = {
+  "SS席": { weekday: "¥17000", holiday: "¥19000" },
+  "Sプラス席": { weekday: "¥16000", holiday: "¥17000" },
+  "S席": { weekday: "¥15000", holiday: "¥16000" },
+  "A席": { weekday: "¥13000", holiday: "¥14000" },
+  "B席": { weekday: "¥11000", holiday: "¥12000" },
+  "C席": { weekday: "¥7000", holiday: "¥7000" },
+  "9と4分の3番線シート": { weekday: "¥20000", holiday: "¥22000" },
 };
 
 const seatAvailability: Record<string, Record<string, boolean>> = {
@@ -2544,6 +2544,7 @@ const links = [
 ];
 
 const months = Array.from(new Set(dailyRows.map((row) => row.month)));
+const holidayDates = new Set(["2026-09-21", "2026-09-22", "2026-09-23", "2026-10-12", "2026-11-03", "2026-11-23"]);
 
 function getOtherCasts(month: string) {
   return otherCastMonths.find((item) => item.month === month)?.casts ?? [];
@@ -2553,9 +2554,20 @@ function getSeatAvailability(row: DailyRow) {
   return seatAvailability[row.date + "-" + row.time] ?? {};
 }
 
-function isWeekend(date: string) {
+function getDayType(date: string) {
   const day = new Date(`${date}T00:00:00+09:00`).getDay();
-  return day === 0 || day === 6;
+  if (day === 6) return "saturday";
+  if (day === 0) return "sunday";
+  return "weekday";
+}
+
+function getSeatPrice(seat: string, dayType: "weekday" | "holiday") {
+  const price = seatPrices[seat];
+  return dayType === "weekday" ? price.weekday : price.holiday;
+}
+
+function getPriceType(date: string) {
+  return getDayType(date) === "weekday" && !holidayDates.has(date) ? "weekday" : "holiday";
 }
 
 export default function Home() {
@@ -2596,8 +2608,7 @@ export default function Home() {
           <table className="scheduleTable">
             <thead>
               <tr>
-                <th>日付</th>
-                <th>開演</th>
+                <th>日時</th>
                 <th>キャスト</th>
                 {seatTypes.map((seat) => (
                   <th key={seat}>
@@ -2609,15 +2620,15 @@ export default function Home() {
             <tbody>
               {visibleRows.map((row) => {
                 const seats = getSeatAvailability(row);
-                const isSoldOut = seatTypes.every((seat) => seats[seat] === false);
-                const rowClassName = [
-                  isSoldOut ? "isSold" : "",
-                  isWeekend(row.date) ? "isWeekend" : "",
-                ].filter(Boolean).join(" ");
+                const dayType = getDayType(row.date);
+                const priceType = getPriceType(row.date);
+                const rowClassName = dayType === "weekday" ? "" : dayType;
                 return (
                   <tr className={rowClassName || undefined} key={row.date + row.time}>
-                    <td><strong>{row.dateLabel}</strong></td>
-                    <td>{row.time}</td>
+                    <td className="dateTimeCell">
+                      <strong>{row.dateLabel}</strong>
+                      <small>{row.time}</small>
+                    </td>
                     <td>
                       <details className="castDetails">
                         <summary>{row.harry}</summary>
@@ -2636,7 +2647,7 @@ export default function Home() {
                       return (
                         <td className={available ? "seatMark ok" : "seatMark ng"} key={seat}>
                           <span aria-label={available ? "空席あり" : "予定枚数終了"}>{available ? "○" : "×"}</span>
-                          {available ? <small>{seatPrices[seat]}</small> : null}
+                          {available ? <small>{getSeatPrice(seat, priceType)}</small> : null}
                         </td>
                       );
                     })}

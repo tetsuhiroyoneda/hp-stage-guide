@@ -9,19 +9,14 @@
 }
 
 :root {
-  --background: #120f17;
-  --foreground: #f7efe0;
-  --muted: #b7aa91;
-  --line: rgba(212, 176, 92, 0.28);
-  --paper: #1d1924;
-  --ink: #f7efe0;
-  --gold: #d4b05c;
-  --gold-soft: #f1dfaa;
-  --open: #49c59a;
-  --sold-bg: #302f35;
-  --weekend-bg: #2d251a;
-  --weekend-sold-bg: #393229;
-  --ng: #8f8a82;
+  --background: #000;
+  --foreground: #fff;
+  --line: #b69452;
+  --paper: #191422;
+  --gold: #e4d68c;
+  --muted: color-mix(in srgb, var(--foreground) 68%, var(--background));
+  --saturday-bg: color-mix(in srgb, var(--paper) 86%, var(--foreground));
+  --sunday-bg: color-mix(in srgb, var(--paper) 78%, var(--line));
 }
 
 @theme inline {
@@ -42,9 +37,7 @@ html {
 body {
   min-width: 320px;
   margin: 0;
-  background:
-    radial-gradient(circle at 10% -10%, rgba(212, 176, 92, 0.2), transparent 32rem),
-    linear-gradient(145deg, #0e0c13 0%, #17121d 48%, #24140f 100%);
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), "Noto Sans JP", system-ui, sans-serif;
 }
@@ -86,7 +79,7 @@ summary {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
   padding: 0 0 16px;
 }
 
@@ -110,11 +103,11 @@ summary {
   min-height: 40px;
   align-items: center;
   gap: 7px;
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
   border-radius: 6px;
   padding: 8px 12px;
-  background: rgba(212, 176, 92, 0.12);
-  color: var(--gold-soft);
+  background: var(--paper);
+  color: var(--gold);
   font-size: 0.86rem;
   font-weight: 800;
 }
@@ -134,10 +127,10 @@ summary {
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
   border-radius: 6px;
-  background: rgba(212, 176, 92, 0.14);
-  color: var(--gold-soft);
+  background: var(--paper);
+  color: var(--gold);
   font-size: 1.1rem;
   font-weight: 900;
 }
@@ -149,16 +142,15 @@ summary {
 .monthSwitcher strong {
   min-width: 82px;
   text-align: center;
-  color: var(--gold-soft);
+  color: var(--gold);
   font-size: 1.15rem;
   font-weight: 900;
 }
 
 .tableSection {
-  border: 1px solid var(--line);
+  border: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
   border-radius: 8px;
   background: var(--paper);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.26);
 }
 
 .tableWrap {
@@ -169,7 +161,7 @@ summary {
 
 .scheduleTable {
   width: 100%;
-  min-width: 900px;
+  min-width: 840px;
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -178,9 +170,9 @@ summary {
   position: sticky;
   top: 0;
   z-index: 5;
-  border-bottom: 1px solid rgba(212, 176, 92, 0.35);
-  background: #07070a;
-  color: var(--gold-soft);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  background: var(--background);
+  color: var(--gold);
   padding: 12px 14px;
   text-align: left;
   font-size: 0.82rem;
@@ -193,7 +185,7 @@ summary {
   z-index: 7;
 }
 
-.scheduleTable th:nth-child(n + 4) {
+.scheduleTable th:nth-child(n + 3) {
   text-align: center;
 }
 
@@ -204,31 +196,26 @@ summary {
 .scheduleTable th small {
   display: block;
   margin-top: 3px;
-  color: rgba(241, 223, 170, 0.68);
+  color: var(--muted);
   font-size: 0.68rem;
   font-weight: 700;
   line-height: 1.25;
 }
 
 .scheduleTable td {
-  border-bottom: 1px solid rgba(212, 176, 92, 0.13);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 24%, transparent);
   padding: 10px 12px;
   color: var(--foreground);
   line-height: 1.45;
   vertical-align: middle;
 }
 
-.scheduleTable tr.isSold td {
-  background: var(--sold-bg);
-  color: var(--foreground);
+.scheduleTable tr.saturday td {
+  background: var(--saturday-bg);
 }
 
-.scheduleTable tr.isWeekend td {
-  background: var(--weekend-bg);
-}
-
-.scheduleTable tr.isWeekend.isSold td {
-  background: var(--weekend-sold-bg);
+.scheduleTable tr.sunday td {
+  background: var(--sunday-bg);
 }
 
 .scheduleTable td:nth-child(1) {
@@ -240,24 +227,40 @@ summary {
   white-space: nowrap;
 }
 
-.scheduleTable tr.isWeekend td:nth-child(1) {
-  background: var(--weekend-bg);
-}
-
-.scheduleTable tr.isSold td:nth-child(1),
-.scheduleTable tr.isWeekend.isSold td:nth-child(1) {
-  background: var(--weekend-sold-bg);
+.scheduleTable th:nth-child(2) {
+  left: 100px;
+  z-index: 7;
 }
 
 .scheduleTable td:nth-child(2) {
-  width: 78px;
-  font-family: var(--font-geist-mono), monospace;
-  font-weight: 800;
-  white-space: nowrap;
+  position: sticky;
+  left: 100px;
+  z-index: 4;
+  width: 150px;
+  background: var(--paper);
 }
 
-.scheduleTable td:nth-child(3) {
-  width: 150px;
+.scheduleTable tr.saturday td:nth-child(1),
+.scheduleTable tr.saturday td:nth-child(2) {
+  background: var(--saturday-bg);
+}
+
+.scheduleTable tr.sunday td:nth-child(1),
+.scheduleTable tr.sunday td:nth-child(2) {
+  background: var(--sunday-bg);
+}
+
+.dateTimeCell strong,
+.dateTimeCell small {
+  display: block;
+}
+
+.dateTimeCell small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .castDetails {
@@ -269,11 +272,11 @@ summary {
   min-height: 32px;
   cursor: pointer;
   align-items: center;
-  border: 1px solid rgba(212, 176, 92, 0.34);
+  border: 1px solid color-mix(in srgb, var(--line) 54%, transparent);
   border-radius: 6px;
   padding: 0 10px;
-  background: rgba(247, 239, 224, 0.08);
-  color: var(--gold-soft);
+  background: var(--background);
+  color: var(--gold);
   font-size: 0.86rem;
   font-weight: 900;
   list-style: none;
@@ -293,10 +296,10 @@ summary {
   max-height: 420px;
   overflow: auto;
   margin-top: 8px;
-  border: 1px solid rgba(212, 176, 92, 0.44);
+  border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
   border-radius: 8px;
   padding: 12px;
-  background: #120f17;
+  background: var(--background);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
 }
 
@@ -337,12 +340,11 @@ summary {
 }
 
 .seatMark.ok {
-  color: var(--open);
+  color: var(--foreground);
 }
 
 .seatMark.ng {
-  background: var(--sold-bg) !important;
-  color: var(--ng);
+  color: var(--muted);
 }
 
 .pageFooter {
@@ -415,7 +417,7 @@ summary {
   }
 
   .scheduleTable {
-    min-width: 760px;
+    min-width: 720px;
   }
 
   .scheduleTable th {
@@ -433,15 +435,16 @@ summary {
   }
 
   .scheduleTable td:nth-child(1) {
-    width: 88px;
+    width: 82px;
   }
 
   .scheduleTable td:nth-child(2) {
-    width: 70px;
+    left: 82px;
+    width: 108px;
   }
 
-  .scheduleTable td:nth-child(3) {
-    width: 116px;
+  .scheduleTable th:nth-child(2) {
+    left: 82px;
   }
 
   .castDetails summary {
