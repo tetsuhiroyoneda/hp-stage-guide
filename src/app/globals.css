@@ -17,7 +17,8 @@
   --ink: #151515;
   --open: #0f6b4f;
   --sold-bg: #e3e3e3;
-  --weekend-bg: #fff7e7;
+  --weekend-bg: #fff0c8;
+  --weekend-sold-bg: #e7ddc6;
   --ng: #8a8a8a;
 }
 
@@ -228,7 +229,7 @@ summary {
 }
 
 .scheduleTable tr.isWeekend.isSold td {
-  background: var(--sold-bg);
+  background: var(--weekend-sold-bg);
 }
 
 .scheduleTable td:nth-child(1) {
@@ -246,7 +247,7 @@ summary {
 
 .scheduleTable tr.isSold td:nth-child(1),
 .scheduleTable tr.isWeekend.isSold td:nth-child(1) {
-  background: var(--sold-bg);
+  background: var(--weekend-sold-bg);
 }
 
 .scheduleTable td:nth-child(2) {
