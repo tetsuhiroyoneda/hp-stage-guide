@@ -19,6 +19,7 @@ type OtherCastMonth = {
 };
 
 const updatedAt = "2026年6月26日";
+const crawledAt = "2026年6月26日 11:48 JST";
 
 const dailyRows: DailyRow[] = [
   {
@@ -1789,6 +1790,7 @@ export default function Home() {
           公開ページで確認できる日別情報は「販売対象 / 貸切・販売なし」とハリー役です。
           取得できない席種別在庫は断定せず「購入画面で確認」と表示しています。
         </span>
+        <em>クロール日時: {crawledAt}</em>
       </section>
 
       <section className="stats" aria-label="概要">
