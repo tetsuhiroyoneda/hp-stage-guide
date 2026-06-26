@@ -78,28 +78,21 @@ summary {
 .pageShell {
   width: min(1480px, calc(100% - 32px));
   margin-inline: auto;
-  padding: 100px 0 56px;
+  padding: 28px 0 56px;
 }
 
 .simpleHeader {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
   border-bottom: 1px solid var(--line);
-  padding: 14px max(16px, calc((100vw - 1480px) / 2 + 16px));
-  background: rgba(18, 15, 23, 0.92);
-  backdrop-filter: blur(16px);
+  padding: 0 0 16px;
 }
 
 .simpleHeader h1 {
   margin: 0;
-  font-size: clamp(1.35rem, 2.6vw, 2.4rem);
+  font-size: clamp(1.15rem, 2vw, 1.9rem);
   font-weight: 900;
   line-height: 1.15;
   letter-spacing: 0;
@@ -371,7 +364,7 @@ summary {
     flex-direction: column;
     width: min(100% - 20px, 1480px);
     overflow: hidden;
-    padding: 130px 0 10px;
+    padding: 12px 0 10px;
   }
 
   .simpleHeader {
@@ -382,7 +375,7 @@ summary {
   }
 
   .simpleHeader h1 {
-    font-size: 1.32rem;
+    font-size: 1.08rem;
   }
 
   .simpleHeader nav {
