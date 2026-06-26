@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 type DailyRow = {
   month: string;
   monthShort: string;
@@ -2531,6 +2535,8 @@ const links = [
   },
 ];
 
+const months = Array.from(new Set(dailyRows.map((row) => row.month)));
+
 function getOtherCasts(month: string) {
   return otherCastMonths.find((item) => item.month === month)?.casts ?? [];
 }
@@ -2539,7 +2545,18 @@ function getSeatAvailability(row: DailyRow) {
   return seatAvailability[row.date + "-" + row.time] ?? {};
 }
 
+function isWeekend(date: string) {
+  const day = new Date(`${date}T00:00:00+09:00`).getDay();
+  return day === 0 || day === 6;
+}
+
 export default function Home() {
+  const [selectedMonth, setSelectedMonth] = useState(months[0]);
+  const monthIndex = months.indexOf(selectedMonth);
+  const visibleRows = dailyRows.filter((row) => row.month === selectedMonth);
+  const previousMonth = months[(monthIndex - 1 + months.length) % months.length];
+  const nextMonth = months[(monthIndex + 1) % months.length];
+
   return (
     <main className="pageShell">
       <header className="simpleHeader">
@@ -2556,6 +2573,16 @@ export default function Home() {
         </nav>
       </header>
 
+      <div className="monthSwitcher" aria-label="月切り替え">
+        <button type="button" onClick={() => setSelectedMonth(previousMonth)} aria-label={`${previousMonth}へ`}>
+          ＜
+        </button>
+        <strong>{selectedMonth.replace("2026年", "")}</strong>
+        <button type="button" onClick={() => setSelectedMonth(nextMonth)} aria-label={`${nextMonth}へ`}>
+          ＞
+        </button>
+      </div>
+
       <section className="tableSection" aria-label="日別販売状況">
         <div className="tableWrap">
           <table className="scheduleTable">
@@ -2570,11 +2597,15 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              {dailyRows.map((row) => {
+              {visibleRows.map((row) => {
                 const seats = getSeatAvailability(row);
                 const isSoldOut = seatTypes.every((seat) => seats[seat] === false);
+                const rowClassName = [
+                  isSoldOut ? "isSold" : "",
+                  isWeekend(row.date) ? "isWeekend" : "",
+                ].filter(Boolean).join(" ");
                 return (
-                  <tr className={isSoldOut ? "isSold" : undefined} key={row.date + row.time}>
+                  <tr className={rowClassName || undefined} key={row.date + row.time}>
                     <td><strong>{row.dateLabel}</strong></td>
                     <td>{row.time}</td>
                     <td>
