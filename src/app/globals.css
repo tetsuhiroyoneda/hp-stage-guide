@@ -11,12 +11,12 @@
 :root {
   --background: #000;
   --foreground: #fff;
-  --line: #b69452;
-  --paper: #191422;
-  --gold: #e4d68c;
+  --line: #fff;
+  --paper: #000;
+  --gold: #d6c86f;
   --muted: color-mix(in srgb, var(--foreground) 68%, var(--background));
-  --saturday-bg: color-mix(in srgb, var(--paper) 86%, var(--foreground));
-  --sunday-bg: color-mix(in srgb, var(--paper) 78%, var(--line));
+  --saturday-bg: #003b5f;
+  --sunday-bg: #4b0000;
 }
 
 @theme inline {
@@ -79,7 +79,7 @@ summary {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  border-bottom: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 50%, transparent);
   padding: 0 0 16px;
 }
 
@@ -107,7 +107,7 @@ summary {
   min-height: 40px;
   align-items: center;
   gap: 7px;
-  border: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
+  border: 1px solid color-mix(in srgb, var(--line) 48%, transparent);
   border-radius: 6px;
   padding: 8px 12px;
   background: var(--paper);
@@ -131,7 +131,7 @@ summary {
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  border: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
+  border: 1px solid color-mix(in srgb, var(--line) 48%, transparent);
   border-radius: 6px;
   background: var(--paper);
   color: var(--gold);
@@ -152,7 +152,7 @@ summary {
 }
 
 .tableSection {
-  border: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
+  border: 2px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
 }
@@ -174,7 +174,8 @@ summary {
   position: sticky;
   top: 0;
   z-index: 5;
-  border-bottom: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  border-right: 2px solid var(--line);
+  border-bottom: 2px solid var(--line);
   background: var(--background);
   color: var(--gold);
   padding: 12px 14px;
@@ -187,6 +188,11 @@ summary {
 .scheduleTable th:first-child {
   left: 0;
   z-index: 7;
+}
+
+.scheduleTable th:last-child,
+.scheduleTable td:last-child {
+  border-right: 0;
 }
 
 .scheduleTable th:nth-child(n + 3) {
@@ -207,7 +213,8 @@ summary {
 }
 
 .scheduleTable td {
-  border-bottom: 1px solid color-mix(in srgb, var(--line) 24%, transparent);
+  border-right: 2px solid var(--line);
+  border-bottom: 2px solid var(--line);
   padding: 10px 12px;
   color: var(--foreground);
   line-height: 1.45;
@@ -261,7 +268,7 @@ summary {
 
 .dateTimeCell small {
   margin-top: 2px;
-  color: var(--muted);
+  color: var(--foreground);
   font-size: 0.7rem;
   font-weight: 700;
   line-height: 1.2;
@@ -276,7 +283,7 @@ summary {
   min-height: 32px;
   cursor: pointer;
   align-items: center;
-  border: 1px solid color-mix(in srgb, var(--line) 54%, transparent);
+  border: 1px solid color-mix(in srgb, var(--gold) 70%, transparent);
   border-radius: 6px;
   padding: 0 10px;
   background: var(--background);
@@ -300,7 +307,7 @@ summary {
   max-height: 420px;
   overflow: auto;
   margin-top: 8px;
-  border: 1px solid color-mix(in srgb, var(--line) 72%, transparent);
+  border: 1px solid var(--line);
   border-radius: 8px;
   padding: 12px;
   background: var(--background);
@@ -344,7 +351,7 @@ summary {
 }
 
 .seatMark.ok {
-  color: var(--foreground);
+  color: var(--gold);
 }
 
 .seatMark.ng {
