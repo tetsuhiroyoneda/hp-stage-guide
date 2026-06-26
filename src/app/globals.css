@@ -18,6 +18,7 @@
   --dim: rgb(255 255 255 / 52%);
   --saturday-bg: #003b5f;
   --sunday-bg: #4b0000;
+  --seat-column-width: 92px;
 }
 
 @theme inline {
@@ -174,6 +175,7 @@ summary {
   min-width: 840px;
   border-collapse: separate;
   border-spacing: 0;
+  table-layout: fixed;
 }
 
 .scheduleTable th {
@@ -202,7 +204,12 @@ summary {
 }
 
 .scheduleTable th:nth-child(n + 3) {
+  width: var(--seat-column-width);
   text-align: center;
+}
+
+.scheduleTable td:nth-child(n + 3) {
+  width: var(--seat-column-width);
 }
 
 .seatName {
@@ -442,6 +449,10 @@ summary {
 }
 
 @media (max-width: 900px) {
+  :root {
+    --seat-column-width: 74px;
+  }
+
   body {
     overflow: hidden;
   }
