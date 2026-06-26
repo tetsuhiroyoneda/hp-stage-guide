@@ -15,7 +15,7 @@
   --paper: #000;
   --gold: #d6c86f;
   --muted: color-mix(in srgb, var(--foreground) 68%, var(--background));
-  --dim: color-mix(in srgb, var(--foreground) 38%, var(--background));
+  --dim: color-mix(in srgb, var(--foreground) 24%, var(--background));
   --saturday-bg: #003b5f;
   --sunday-bg: #4b0000;
 }

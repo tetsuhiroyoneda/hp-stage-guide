@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type DailyRow = {
   month: string;
@@ -2257,6 +2257,17 @@ const links = [
 const months = Array.from(new Set(dailyRows.map((row) => row.month)));
 const holidayDates = new Set(["2026-09-21", "2026-09-22", "2026-09-23", "2026-10-12", "2026-11-03", "2026-11-23"]);
 
+function getMonthParam(month: string) {
+  return month.replace("2026年", "").replace("月", "");
+}
+
+function getMonthFromParam(value: string | null) {
+  if (!value) return months[0];
+
+  const normalizedValue = value.replace(/^0/, "").replace("月", "");
+  return months.find((month) => getMonthParam(month) === normalizedValue) ?? months[0];
+}
+
 function getDailyCasts(row: DailyRow) {
   return [{ role: "ハリー", names: [row.harry] }];
 }
@@ -2289,6 +2300,30 @@ export default function Home() {
   const previousMonth = months[monthIndex - 1];
   const nextMonth = months[monthIndex + 1];
 
+  useEffect(() => {
+    const syncMonthFromUrl = () => {
+      const params = new URLSearchParams(window.location.search);
+      setSelectedMonth(getMonthFromParam(params.get("month")));
+    };
+
+    syncMonthFromUrl();
+    window.addEventListener("popstate", syncMonthFromUrl);
+
+    return () => {
+      window.removeEventListener("popstate", syncMonthFromUrl);
+    };
+  }, []);
+
+  const changeMonth = (month?: string) => {
+    if (!month) return;
+
+    const params = new URLSearchParams(window.location.search);
+    params.set("month", getMonthParam(month));
+    const nextUrl = `${window.location.pathname}?${params.toString()}${window.location.hash}`;
+    window.history.pushState(null, "", nextUrl);
+    setSelectedMonth(month);
+  };
+
   return (
     <main className="pageShell">
       <header className="simpleHeader">
@@ -2311,7 +2346,7 @@ export default function Home() {
       <div className="monthSwitcher" aria-label="月切り替え">
         <button
           type="button"
-          onClick={() => previousMonth && setSelectedMonth(previousMonth)}
+          onClick={() => changeMonth(previousMonth)}
           disabled={!previousMonth}
           aria-label={previousMonth ? `${previousMonth}へ` : "前の月はありません"}
         >
@@ -2320,7 +2355,7 @@ export default function Home() {
         <strong>{selectedMonth.replace("2026年", "")}</strong>
         <button
           type="button"
-          onClick={() => nextMonth && setSelectedMonth(nextMonth)}
+          onClick={() => changeMonth(nextMonth)}
           disabled={!nextMonth}
           aria-label={nextMonth ? `${nextMonth}へ` : "次の月はありません"}
         >
