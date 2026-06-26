@@ -2635,9 +2635,7 @@ export default function Home() {
                       const available = seats[seat] === true;
                       return (
                         <td className={available ? "seatMark ok" : "seatMark ng"} key={seat}>
-                          <span className="mi" aria-label={available ? "空席あり" : "予定枚数終了"}>
-                            {available ? "check_circle" : "cancel"}
-                          </span>
+                          <span aria-label={available ? "空席あり" : "予定枚数終了"}>{available ? "○" : "×"}</span>
                           {available ? <small>{seatPrices[seat]}</small> : null}
                         </td>
                       );
