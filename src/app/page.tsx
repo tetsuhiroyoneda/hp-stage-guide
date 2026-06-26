@@ -2533,14 +2533,12 @@ const seatAvailability: Record<string, Record<string, boolean>> = {
 const links = [
   {
     label: "公式チケット",
+    icon: "confirmation_number",
     href: "https://www.harrypotter-stage.jp/schedule-tickets/",
   },
   {
-    label: "キャストスケジュール",
-    href: "https://www.harrypotter-stage.jp/schedule/",
-  },
-  {
     label: "TBSチケット",
+    icon: "local_activity",
     href: "https://tickets.tbs.co.jp/harrypotteronstage/",
   },
 ];
@@ -2571,12 +2569,12 @@ export default function Home() {
     <main className="pageShell">
       <header className="simpleHeader">
         <div>
-          <p>last update: {crawledAt}</p>
           <h1>ハリー・ポッター舞台 日別販売状況</h1>
         </div>
         <nav aria-label="確認リンク">
           {links.map((link) => (
             <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>
+              <span className="mi" aria-hidden="true">{link.icon}</span>
               {link.label}
             </a>
           ))}
@@ -2585,11 +2583,11 @@ export default function Home() {
 
       <div className="monthSwitcher" aria-label="月切り替え">
         <button type="button" onClick={() => setSelectedMonth(previousMonth)} aria-label={`${previousMonth}へ`}>
-          ＜
+          <span className="mi" aria-hidden="true">chevron_left</span>
         </button>
         <strong>{selectedMonth.replace("2026年", "")}</strong>
         <button type="button" onClick={() => setSelectedMonth(nextMonth)} aria-label={`${nextMonth}へ`}>
-          ＞
+          <span className="mi" aria-hidden="true">chevron_right</span>
         </button>
       </div>
 
@@ -2638,7 +2636,9 @@ export default function Home() {
                       const available = seats[seat] === true;
                       return (
                         <td className={available ? "seatMark ok" : "seatMark ng"} key={seat}>
-                          {available ? "○" : "×"}
+                          <span className="mi" aria-label={available ? "空席あり" : "予定枚数終了"}>
+                            {available ? "check_circle" : "cancel"}
+                          </span>
                         </td>
                       );
                     })}
@@ -2649,6 +2649,7 @@ export default function Home() {
           </table>
         </div>
       </section>
+      <footer className="pageFooter">last update: {crawledAt}</footer>
     </main>
   );
 }
