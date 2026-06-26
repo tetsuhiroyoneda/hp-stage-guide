@@ -15,6 +15,7 @@
   --paper: #000;
   --gold: #d6c86f;
   --muted: color-mix(in srgb, var(--foreground) 68%, var(--background));
+  --dim: color-mix(in srgb, var(--foreground) 38%, var(--background));
   --saturday-bg: #003b5f;
   --sunday-bg: #4b0000;
 }
@@ -281,9 +282,18 @@ summary {
 
 .dateTimeCell.isSoldOut strong,
 .dateTimeCell.isSoldOut small {
-  color: var(--muted);
+  color: var(--dim);
   text-decoration: line-through;
   text-decoration-thickness: 2px;
+}
+
+.scheduleTable tr.isSoldOut .castButton,
+.scheduleTable tr.isSoldOut .seatMark.ng {
+  color: var(--dim);
+}
+
+.scheduleTable tr.isSoldOut .castButton {
+  border-color: color-mix(in srgb, var(--dim) 70%, transparent);
 }
 
 .castButton {

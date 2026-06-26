@@ -2347,8 +2347,11 @@ export default function Home() {
                 const seats = getSeatAvailability(row);
                 const dayType = getDayType(row.date);
                 const priceType = getPriceType(row.date);
-                const isSoldOut = seatTypes.every((seat) => seats[seat] === false);
-                const rowClassName = dayType === "weekday" ? "" : dayType;
+                const isSoldOut = row.time === "貸切" || seatTypes.every((seat) => seats[seat] === false);
+                const rowClassName = [
+                  dayType === "weekday" ? "" : dayType,
+                  isSoldOut ? "isSoldOut" : "",
+                ].filter(Boolean).join(" ");
                 return (
                   <tr className={rowClassName || undefined} key={row.date + row.time}>
                     <td className={isSoldOut ? "dateTimeCell isSoldOut" : "dateTimeCell"}>
@@ -2377,8 +2380,7 @@ export default function Home() {
         </div>
       </section>
       <footer className="pageFooter">
-        <p>9と4分の3番線シートはすべて売り切れ</p>
-        <p>※正確な情報は公式サイト、チケット販売サイトを参照してください</p>
+        <p>※正確な情報は公式サイト、チケット販売サイトを参照してください／9と4分の3番線シートはすべて売り切れ</p>
         <p>last update: {crawledAt}</p>
       </footer>
       {selectedCastRow ? (
