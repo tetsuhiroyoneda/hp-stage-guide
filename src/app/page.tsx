@@ -2285,8 +2285,8 @@ export default function Home() {
   const [selectedMonth, setSelectedMonth] = useState(months[0]);
   const monthIndex = months.indexOf(selectedMonth);
   const visibleRows = dailyRows.filter((row) => row.month === selectedMonth);
-  const previousMonth = months[(monthIndex - 1 + months.length) % months.length];
-  const nextMonth = months[(monthIndex + 1) % months.length];
+  const previousMonth = months[monthIndex - 1];
+  const nextMonth = months[monthIndex + 1];
 
   return (
     <main className="pageShell">
@@ -2308,11 +2308,21 @@ export default function Home() {
       </header>
 
       <div className="monthSwitcher" aria-label="月切り替え">
-        <button type="button" onClick={() => setSelectedMonth(previousMonth)} aria-label={`${previousMonth}へ`}>
+        <button
+          type="button"
+          onClick={() => previousMonth && setSelectedMonth(previousMonth)}
+          disabled={!previousMonth}
+          aria-label={previousMonth ? `${previousMonth}へ` : "前の月はありません"}
+        >
           <span className="mi" aria-hidden="true">chevron_left</span>
         </button>
         <strong>{selectedMonth.replace("2026年", "")}</strong>
-        <button type="button" onClick={() => setSelectedMonth(nextMonth)} aria-label={`${nextMonth}へ`}>
+        <button
+          type="button"
+          onClick={() => nextMonth && setSelectedMonth(nextMonth)}
+          disabled={!nextMonth}
+          aria-label={nextMonth ? `${nextMonth}へ` : "次の月はありません"}
+        >
           <span className="mi" aria-hidden="true">chevron_right</span>
         </button>
       </div>
