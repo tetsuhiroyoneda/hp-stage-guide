@@ -2293,7 +2293,10 @@ export default function Home() {
     <main className="pageShell">
       <header className="simpleHeader">
         <div>
-          <h1>ハリー・ポッター舞台 日別販売状況</h1>
+          <h1>
+            舞台『ハリー・ポッターと呪いの子』
+            <span>チケット販売状況</span>
+          </h1>
         </div>
         <nav aria-label="確認リンク">
           {links.map((link) => (

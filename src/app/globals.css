@@ -91,6 +91,10 @@ summary {
   letter-spacing: 0;
 }
 
+.simpleHeader h1 span {
+  display: block;
+}
+
 .simpleHeader nav {
   display: flex;
   flex-wrap: wrap;
