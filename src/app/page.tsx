@@ -1057,7 +1057,7 @@ const dailyRows: DailyRow[] = [
   }
 ];
 
-const seatTypes = ["SS席", "Sプラス席", "S席", "A席", "B席", "C席", "9と4分の3番線シート"];
+const seatTypes = ["SS席", "Sプラス席", "S席", "A席", "B席", "C席"];
 
 const seatPrices: Record<string, { weekday: string; holiday: string }> = {
   "SS席": { weekday: "¥17,000", holiday: "¥19,000" },
@@ -1066,7 +1066,6 @@ const seatPrices: Record<string, { weekday: string; holiday: string }> = {
   "A席": { weekday: "¥13,000", holiday: "¥14,000" },
   "B席": { weekday: "¥11,000", holiday: "¥12,000" },
   "C席": { weekday: "¥7,000", holiday: "¥7,000" },
-  "9と4分の3番線シート": { weekday: "¥20,000", holiday: "¥22,000" },
 };
 
 const seatAvailability: Record<string, Record<string, boolean>> = {
@@ -2373,6 +2372,7 @@ export default function Home() {
         </div>
       </section>
       <footer className="pageFooter">
+        <p>9と4分の3番線シートはすべて売り切れ</p>
         <p>※正確な情報は公式サイト、チケット販売サイトを参照してください</p>
         <p>last update: {crawledAt}</p>
       </footer>
