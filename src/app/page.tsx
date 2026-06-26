@@ -2602,7 +2602,6 @@ export default function Home() {
                 {seatTypes.map((seat) => (
                   <th key={seat}>
                     <span className="seatName">{seat}</span>
-                    <small>{seatPrices[seat]}</small>
                   </th>
                 ))}
               </tr>
@@ -2639,6 +2638,7 @@ export default function Home() {
                           <span className="mi" aria-label={available ? "空席あり" : "予定枚数終了"}>
                             {available ? "check_circle" : "cancel"}
                           </span>
+                          {available ? <small>{seatPrices[seat]}</small> : null}
                         </td>
                       );
                     })}
