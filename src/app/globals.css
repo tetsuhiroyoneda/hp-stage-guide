@@ -305,7 +305,7 @@ summary {
 .seatMark small {
   display: block;
   margin-top: 2px;
-  color: var(--muted);
+  color: var(--foreground);
   font-size: 0.62rem;
   font-weight: 700;
   line-height: 1.15;
