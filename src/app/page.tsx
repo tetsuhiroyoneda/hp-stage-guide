@@ -2247,11 +2247,6 @@ const links = [
     icon: "confirmation_number",
     href: "https://www.harrypotter-stage.jp/schedule-tickets/",
   },
-  {
-    label: "TBSチケット",
-    icon: "local_activity",
-    href: "https://tickets.tbs.co.jp/harrypotteronstage/",
-  },
 ];
 
 const months = Array.from(new Set(dailyRows.map((row) => row.month)));
