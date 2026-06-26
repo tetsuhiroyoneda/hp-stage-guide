@@ -1734,177 +1734,122 @@ const otherCastMonths: OtherCastMonth[] = [
   }
 ];
 
+const seatTypes = ["SS席", "Sプラス席", "S席", "A席", "B席", "9と4分の3番線シート"];
+
 const links = [
   {
-    label: "公式サイト: 公演日程・チケット",
+    label: "公式チケット",
     href: "https://www.harrypotter-stage.jp/schedule-tickets/",
   },
   {
-    label: "公式サイト: キャストスケジュール",
+    label: "キャストスケジュール",
     href: "https://www.harrypotter-stage.jp/schedule/",
   },
   {
-    label: "公式ニュース: 2026年8月から12月の出演予定",
-    href: "https://www.harrypotter-stage.jp/news_detail/20260601_monthly/",
-  },
-  {
-    label: "TBSチケット: ハリー・ポッターと呪いの子",
+    label: "TBSチケット",
     href: "https://tickets.tbs.co.jp/harrypotteronstage/",
-  },
-  {
-    label: "ローチケ: 月別販売ページ",
-    href: "https://l-tike.com/play/mevent/?mid=633328",
-  },
-  {
-    label: "チケットぴあ: 公演一覧",
-    href: "https://t.pia.jp/pia/events/harrypotter-stage",
   },
 ];
 
-const months = Array.from(new Set(dailyRows.map((row) => row.month)));
-const openCount = dailyRows.filter((row) => row.status === "販売対象").length;
-const reservedCount = dailyRows.filter((row) => row.statusKind.includes("reserved")).length;
+function getSeatStatus(row: DailyRow) {
+  if (row.statusKind.includes("reserved") || row.statusKind.includes("none")) {
+    return seatTypes.map((seat) => ({ seat, label: "販売なし", tone: "sold" }));
+  }
+
+  return seatTypes.map((seat) => ({ seat, label: "購入画面で確認", tone: "check" }));
+}
+
+function getOtherCasts(month: string) {
+  return otherCastMonths.find((item) => item.month === month)?.casts ?? [];
+}
+
+const openRows = dailyRows.filter((row) => row.status === "販売対象").length;
+const unavailableRows = dailyRows.length - openRows;
 
 export default function Home() {
   return (
-    <main>
-      <section className="hero compactHero">
-        <div className="heroImage" aria-hidden="true" />
-        <div className="heroScrim" />
-        <div className="heroContent">
-          <p className="eyebrow">非公式まとめ / {updatedAt}確認</p>
-          <h1>舞台「ハリー・ポッターと呪いの子」日別キャスト・販売状況</h1>
-          <p className="lead">
-            2026年9月以降の各公演について、公式キャストスケジュールで日別に出ているハリー役と、
-            公式カレンダー上の販売対象・貸切状況を1日単位でまとめました。
-          </p>
-          <div className="heroActions" aria-label="主要リンク">
-            <a href="https://www.harrypotter-stage.jp/schedule-tickets/" target="_blank" rel="noreferrer">
-              公式チケットへ
-            </a>
-            <a href="#daily">日別一覧へ</a>
-          </div>
-        </div>
-      </section>
-
-      <section className="summary" aria-label="概要">
+    <main className="pageShell">
+      <header className="simpleHeader">
         <div>
-          <span className="summaryLabel">対象期間</span>
-          <strong>2026/9/2(水) - 12/27(日)</strong>
+          <p>非公式まとめ / {updatedAt}確認</p>
+          <h1>ハリー・ポッター舞台 日別販売状況</h1>
         </div>
-        <div>
-          <span className="summaryLabel">日別掲載数</span>
-          <strong>{dailyRows.length}公演</strong>
-        </div>
-        <div>
-          <span className="summaryLabel">公式カレンダー</span>
-          <strong>{openCount}公演が販売対象 / {reservedCount}公演が貸切</strong>
-        </div>
-      </section>
-
-      <section className="contentBand" id="daily">
-        <div className="sectionHead">
-          <p className="eyebrow dark">Daily guide</p>
-          <h2>日別のキャストと売り切れ状況</h2>
-          <p>
-            日別で確定的に掲載できるキャストは、公式キャストスケジュールに出ているハリー・ポッター役です。
-            席種ごとの完売・残席は販売サイトの購入画面で変動するため、この一覧では「販売対象」「貸切/販売なし」と、購入画面での確認が必要な旨を分けて表示しています。
-          </p>
-        </div>
-
-        <div className="legend" aria-label="凡例">
-          <span><i className="dot open" />販売対象</span>
-          <span><i className="dot reserved" />貸切/販売なし</span>
-          <span><i className="dot special" />特別開演時間・サポート公演</span>
-        </div>
-
-        <div className="dailyMonths">
-          {months.map((month) => {
-            const rows = dailyRows.filter((row) => row.month === month);
-            return (
-              <section className="dailyMonth" key={month}>
-                <div className="dailyMonthHead">
-                  <h3>{month}</h3>
-                  <span>{rows.length}公演</span>
-                </div>
-                <div className="dailyTableWrap">
-                  <table className="dailyTable">
-                    <thead>
-                      <tr>
-                        <th>日付</th>
-                        <th>開演</th>
-                        <th>ハリー役</th>
-                        <th>売り切れ/販売状況</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {rows.map((row) => (
-                        <tr key={row.date + "-" + row.time}>
-                          <td>
-                            <span className="dateText">{row.dateLabel}</span>
-                          </td>
-                          <td>{row.time}</td>
-                          <td>
-                            <strong>{row.harry}</strong>
-                          </td>
-                          <td>
-                            <span className={"statusPill " + row.statusKind}>{row.status}</span>
-                            <small>{row.statusDetail}</small>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </section>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="castBand">
-        <div className="sectionHead compact">
-          <p className="eyebrow dark">Other roles</p>
-          <h2>その他キャストは月別予定で確認</h2>
-          <p>
-            ハリー役以外は、公式ニュースで月別の出演予定として発表されている範囲をまとめています。
-            実際の出演者は公演回ごとに変更される可能性があります。
-          </p>
-        </div>
-
-        <div className="otherCastGrid">
-          {otherCastMonths.map((month) => (
-            <article className="otherCastCard" key={month.month}>
-              <h3>{month.month}</h3>
-              <div className="castRows">
-                {month.casts.map((cast) => (
-                  <div className="castRow" key={month.month + cast.role}>
-                    <span>{cast.role}</span>
-                    <p>{cast.names.join(" / ")}</p>
-                  </div>
-                ))}
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section className="contentBand last">
-        <div className="sectionHead compact">
-          <p className="eyebrow dark">Ticket links</p>
-          <h2>購入・確認リンク</h2>
-          <p>
-            完売状況は販売サイトごと、席種ごと、購入画面のタイミングごとに変わります。
-            気になる日が決まったら、必ず公式サイトまたは販売サイトで最新表示を確認してください。
-          </p>
-        </div>
-        <div className="linkGrid">
+        <nav aria-label="確認リンク">
           {links.map((link) => (
             <a href={link.href} target="_blank" rel="noreferrer" key={link.href}>
-              <span>{link.label}</span>
-              <small>{new URL(link.href).hostname}</small>
+              {link.label}
             </a>
           ))}
+        </nav>
+      </header>
+
+      <section className="notice">
+        <strong>席種別の完売・残席は、販売サイトの購入画面で変動します。</strong>
+        <span>
+          公開ページで確認できる日別情報は「販売対象 / 貸切・販売なし」とハリー役です。
+          取得できない席種別在庫は断定せず「購入画面で確認」と表示しています。
+        </span>
+      </section>
+
+      <section className="stats" aria-label="概要">
+        <div><span>対象</span><b>2026/9/2 - 12/27</b></div>
+        <div><span>販売対象</span><b>{openRows}公演</b></div>
+        <div><span>貸切/販売なし</span><b>{unavailableRows}公演</b></div>
+      </section>
+
+      <section className="tableSection" aria-label="日別販売状況">
+        <div className="tableWrap">
+          <table className="scheduleTable">
+            <thead>
+              <tr>
+                <th>日付</th>
+                <th>開演</th>
+                <th>販売</th>
+                <th>ハリー役</th>
+                <th>席種別</th>
+                <th>他キャスト</th>
+              </tr>
+            </thead>
+            <tbody>
+              {dailyRows.map((row) => {
+                const seatStatus = getSeatStatus(row);
+                const isUnavailable = seatStatus.every((seat) => seat.tone === "sold");
+                return (
+                  <tr className={isUnavailable ? "isSold" : undefined} key={row.date + row.time}>
+                    <td><strong>{row.dateLabel}</strong></td>
+                    <td>{row.time}</td>
+                    <td>
+                      <span className={"statusBadge " + (isUnavailable ? "sold" : "open")}>{row.status}</span>
+                      <small>{row.statusDetail}</small>
+                    </td>
+                    <td>{row.harry}</td>
+                    <td>
+                      <div className="seatGrid">
+                        {seatStatus.map((seat) => (
+                          <span className={"seatChip " + seat.tone} key={seat.seat}>
+                            <b>{seat.seat}</b>{seat.label}
+                          </span>
+                        ))}
+                      </div>
+                    </td>
+                    <td>
+                      <details className="castDetails">
+                        <summary>役一覧</summary>
+                        <div className="castPanel">
+                          <p><b>ハリー</b>{row.harry}</p>
+                          {getOtherCasts(row.month).map((cast) => (
+                            <p key={row.date + row.time + cast.role}>
+                              <b>{cast.role}</b>{cast.names.join(" / ")}
+                            </p>
+                          ))}
+                        </div>
+                      </details>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
       </section>
     </main>
