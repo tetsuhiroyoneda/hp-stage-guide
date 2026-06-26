@@ -279,6 +279,13 @@ summary {
   line-height: 1.2;
 }
 
+.dateTimeCell.isSoldOut strong,
+.dateTimeCell.isSoldOut small {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
 .castButton {
   display: inline-flex;
   min-height: 32px;

@@ -2347,10 +2347,11 @@ export default function Home() {
                 const seats = getSeatAvailability(row);
                 const dayType = getDayType(row.date);
                 const priceType = getPriceType(row.date);
+                const isSoldOut = seatTypes.every((seat) => seats[seat] === false);
                 const rowClassName = dayType === "weekday" ? "" : dayType;
                 return (
                   <tr className={rowClassName || undefined} key={row.date + row.time}>
-                    <td className="dateTimeCell">
+                    <td className={isSoldOut ? "dateTimeCell isSoldOut" : "dateTimeCell"}>
                       <strong>{row.dateLabel}</strong>
                       <small>{row.time}</small>
                     </td>
