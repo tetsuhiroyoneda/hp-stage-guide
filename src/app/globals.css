@@ -299,19 +299,17 @@ summary {
 }
 
 .castPanel {
-  position: absolute;
-  right: 0;
+  position: static;
   z-index: 8;
   display: none;
-  width: min(420px, 80vw);
-  max-height: 420px;
-  overflow: auto;
+  width: min(280px, 58vw);
+  max-height: none;
+  overflow: visible;
   margin-top: 8px;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 12px;
   background: var(--background);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
 }
 
 .castDetails[open] .castPanel,
@@ -322,7 +320,7 @@ summary {
 
 .castPanel p {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 72px 1fr;
   gap: 10px;
   margin: 0;
   color: var(--foreground);
