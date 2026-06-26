@@ -2405,6 +2405,9 @@ export default function Home() {
                   <span>{cast.names.join(" / ")}</span>
                 </p>
               ))}
+              {getDailyCasts(selectedCastRow).length === 1 ? (
+                <small>主演以外のキャストは公式サイトで未発表です</small>
+              ) : null}
             </div>
           </section>
         </div>

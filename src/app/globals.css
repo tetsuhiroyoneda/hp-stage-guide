@@ -414,6 +414,12 @@ summary {
   color: var(--gold);
 }
 
+.castModalBody small {
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
 @media (max-width: 900px) {
   body {
     overflow: hidden;
