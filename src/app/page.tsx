@@ -6,7 +6,6 @@ type DailyRow = {
   time: string;
   harry: string;
   status: string;
-  statusDetail: string;
   statusKind: string;
 };
 
@@ -18,7 +17,6 @@ type OtherCastMonth = {
   }[];
 };
 
-const updatedAt = "2026年6月26日";
 const crawledAt = "2026年6月26日 11:48 JST";
 
 const dailyRows: DailyRow[] = [
@@ -30,7 +28,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -41,7 +38,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -52,7 +48,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -63,7 +58,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -74,7 +68,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "鑑賞サポート公演。完売は購入画面で確認",
     "statusKind": "open support"
   },
   {
@@ -85,7 +78,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -96,7 +88,6 @@ const dailyRows: DailyRow[] = [
     "time": "13:30",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "13:30開演。完売は購入画面で確認",
     "statusKind": "open special"
   },
   {
@@ -107,7 +98,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -118,7 +108,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -129,7 +118,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -140,7 +128,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -151,7 +138,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -162,7 +148,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "鑑賞サポート公演。完売は購入画面で確認",
     "statusKind": "open support"
   },
   {
@@ -173,7 +158,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -184,7 +168,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -195,7 +178,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -206,7 +188,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -217,7 +198,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -228,7 +208,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -239,7 +218,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -250,7 +228,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -261,7 +238,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -272,7 +248,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -283,7 +258,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -294,7 +268,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -305,7 +278,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -316,7 +288,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -327,7 +298,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -338,7 +308,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -349,7 +318,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -360,7 +328,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -371,7 +338,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -382,7 +348,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -393,7 +358,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -404,7 +368,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -415,7 +378,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -426,7 +388,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "石丸幹二",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -437,7 +398,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -448,7 +408,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -459,7 +418,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -470,7 +428,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -481,7 +438,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -492,7 +448,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -503,7 +458,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -514,7 +468,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -525,7 +478,6 @@ const dailyRows: DailyRow[] = [
     "time": "13:30",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "13:30開演。完売は購入画面で確認",
     "statusKind": "open special"
   },
   {
@@ -536,7 +488,6 @@ const dailyRows: DailyRow[] = [
     "time": "17:30",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "17:30開演。完売は購入画面で確認",
     "statusKind": "open special"
   },
   {
@@ -547,7 +498,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -558,7 +508,6 @@ const dailyRows: DailyRow[] = [
     "time": "13:30",
     "harry": "平岡祐太",
     "status": "貸切/販売なし",
-    "statusDetail": "公式カレンダーで貸切扱い",
     "statusKind": "reserved"
   },
   {
@@ -569,7 +518,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -580,7 +528,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -591,7 +538,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -602,7 +548,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -613,7 +558,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -624,7 +568,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -635,7 +578,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -646,7 +588,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -657,7 +598,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -668,7 +608,6 @@ const dailyRows: DailyRow[] = [
     "time": "貸切",
     "harry": "藤木直人",
     "status": "貸切/販売なし",
-    "statusDetail": "公式カレンダーで貸切扱い",
     "statusKind": "reserved"
   },
   {
@@ -679,7 +618,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -690,7 +628,6 @@ const dailyRows: DailyRow[] = [
     "time": "貸切",
     "harry": "平岡祐太",
     "status": "貸切/販売なし",
-    "statusDetail": "公式カレンダーで貸切扱い",
     "statusKind": "reserved"
   },
   {
@@ -701,7 +638,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -712,7 +648,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -723,7 +658,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -734,7 +668,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "小野賢章",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -745,7 +678,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -756,7 +688,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -767,7 +698,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -778,7 +708,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -789,7 +718,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -800,7 +728,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -811,7 +738,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -822,7 +748,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -833,7 +758,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -844,7 +768,6 @@ const dailyRows: DailyRow[] = [
     "time": "13:30",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "13:30開演。完売は購入画面で確認",
     "statusKind": "open special"
   },
   {
@@ -855,7 +778,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -866,7 +788,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -877,7 +798,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -888,7 +808,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -899,7 +818,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -910,7 +828,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -921,7 +838,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -932,7 +848,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -943,7 +858,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -954,7 +868,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -965,7 +878,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -976,7 +888,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -987,7 +898,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -998,7 +908,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1009,7 +918,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤木直人",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1020,7 +928,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1031,7 +938,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1042,7 +948,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1053,7 +958,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1064,7 +968,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1075,7 +978,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1086,7 +988,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "平岡祐太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1097,7 +998,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1108,7 +1008,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1119,7 +1018,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1130,7 +1028,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1141,7 +1038,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1152,7 +1048,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1163,7 +1058,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1174,7 +1068,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1185,7 +1078,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1196,7 +1088,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1207,7 +1098,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1218,7 +1108,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1229,7 +1118,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1240,7 +1128,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1251,7 +1138,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1262,7 +1148,6 @@ const dailyRows: DailyRow[] = [
     "time": "13:30",
     "harry": "藤原竜也",
     "status": "貸切/販売なし",
-    "statusDetail": "公式カレンダーで貸切扱い",
     "statusKind": "reserved"
   },
   {
@@ -1273,7 +1158,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1284,7 +1168,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1295,7 +1178,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1306,7 +1188,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1317,7 +1198,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1328,7 +1208,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1339,7 +1218,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1350,7 +1228,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1361,7 +1238,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1372,7 +1248,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1383,7 +1258,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1394,7 +1268,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "上野聖太",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1405,7 +1278,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1416,7 +1288,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1427,7 +1298,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1438,7 +1308,6 @@ const dailyRows: DailyRow[] = [
     "time": "12:15",
     "harry": "稲垣吾郎",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   },
   {
@@ -1449,7 +1318,6 @@ const dailyRows: DailyRow[] = [
     "time": "18:15",
     "harry": "藤原竜也",
     "status": "販売対象",
-    "statusDetail": "月別販売枠は発売中。完売は購入画面で確認",
     "statusKind": "open"
   }
 ];
@@ -1757,22 +1625,19 @@ function getSeatStatus(row: DailyRow) {
     return seatTypes.map((seat) => ({ seat, label: "販売なし", tone: "sold" }));
   }
 
-  return seatTypes.map((seat) => ({ seat, label: "購入画面で確認", tone: "check" }));
+  return seatTypes.map((seat) => ({ seat, label: "要確認", tone: "check" }));
 }
 
 function getOtherCasts(month: string) {
   return otherCastMonths.find((item) => item.month === month)?.casts ?? [];
 }
 
-const openRows = dailyRows.filter((row) => row.status === "販売対象").length;
-const unavailableRows = dailyRows.length - openRows;
-
 export default function Home() {
   return (
     <main className="pageShell">
       <header className="simpleHeader">
         <div>
-          <p>非公式まとめ / {updatedAt}確認</p>
+          <p>クロール: {crawledAt}</p>
           <h1>ハリー・ポッター舞台 日別販売状況</h1>
         </div>
         <nav aria-label="確認リンク">
@@ -1783,21 +1648,6 @@ export default function Home() {
           ))}
         </nav>
       </header>
-
-      <section className="notice">
-        <strong>席種別の完売・残席は、販売サイトの購入画面で変動します。</strong>
-        <span>
-          公開ページで確認できる日別情報は「販売対象 / 貸切・販売なし」とハリー役です。
-          取得できない席種別在庫は断定せず「購入画面で確認」と表示しています。
-        </span>
-        <em>クロール日時: {crawledAt}</em>
-      </section>
-
-      <section className="stats" aria-label="概要">
-        <div><span>対象</span><b>2026/9/2 - 12/27</b></div>
-        <div><span>販売対象</span><b>{openRows}公演</b></div>
-        <div><span>貸切/販売なし</span><b>{unavailableRows}公演</b></div>
-      </section>
 
       <section className="tableSection" aria-label="日別販売状況">
         <div className="tableWrap">
@@ -1822,7 +1672,6 @@ export default function Home() {
                     <td>{row.time}</td>
                     <td>
                       <span className={"statusBadge " + (isUnavailable ? "sold" : "open")}>{row.status}</span>
-                      <small>{row.statusDetail}</small>
                     </td>
                     <td>{row.harry}</td>
                     <td>
