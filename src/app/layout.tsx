@@ -13,9 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ハリー・ポッター舞台 9月以降の予約・出演予定まとめ",
-  description:
-    "舞台「ハリー・ポッターと呪いの子」東京公演の2026年9月以降の販売状況と月別キャスト予定をまとめた非公式ガイドです。",
+  title: "ハリー・ポッター舞台 日別販売状況",
+  description: "日別販売状況",
 };
 
 export default function RootLayout({
