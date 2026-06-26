@@ -337,6 +337,10 @@ summary {
   color: var(--muted);
 }
 
+.seatMark.ng small {
+  color: currentColor;
+}
+
 .pageFooter {
   padding: 18px 2px 0;
   color: var(--muted);

@@ -2403,7 +2403,7 @@ export default function Home() {
                       return (
                         <td className={available ? "seatMark ok" : "seatMark ng"} key={seat}>
                           <span aria-label={available ? "空席あり" : "予定枚数終了"}>{available ? "○" : "×"}</span>
-                          {available ? <small>{getSeatPrice(seat, priceType)}</small> : null}
+                          <small>{getSeatPrice(seat, priceType)}</small>
                         </td>
                       );
                     })}
