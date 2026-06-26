@@ -5,8 +5,6 @@ type DailyRow = {
   dateLabel: string;
   time: string;
   harry: string;
-  status: string;
-  statusKind: string;
 };
 
 type OtherCastMonth = {
@@ -17,7 +15,7 @@ type OtherCastMonth = {
   }[];
 };
 
-const crawledAt = "2026年6月26日 11:48 JST";
+const crawledAt = "2026年6月26日 14:14 JST";
 
 const dailyRows: DailyRow[] = [
   {
@@ -27,8 +25,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/2(水)",
     "time": "12:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -37,8 +33,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/3(木)",
     "time": "12:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -47,8 +41,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/4(金)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -57,8 +49,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/5(土)",
     "time": "12:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -67,8 +57,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/5(土)",
     "time": "18:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open support"
   },
   {
     "month": "2026年9月",
@@ -77,8 +65,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/6(日)",
     "time": "12:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -87,8 +73,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/8(火)",
     "time": "13:30",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open special"
   },
   {
     "month": "2026年9月",
@@ -97,8 +81,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/9(水)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -107,8 +89,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/9(水)",
     "time": "18:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -117,8 +97,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/11(金)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -127,8 +105,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/12(土)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -137,8 +113,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/12(土)",
     "time": "18:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -147,8 +121,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/13(日)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open support"
   },
   {
     "month": "2026年9月",
@@ -157,8 +129,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/15(火)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -167,8 +137,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/16(水)",
     "time": "12:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -177,8 +145,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/16(水)",
     "time": "18:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -187,8 +153,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/17(木)",
     "time": "18:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -197,8 +161,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/18(金)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -207,8 +169,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/19(土)",
     "time": "12:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -217,8 +177,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/19(土)",
     "time": "18:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -227,8 +185,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/20(日)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -237,8 +193,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/22(火)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -247,8 +201,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/22(火)",
     "time": "18:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -257,8 +209,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/23(水)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -267,8 +217,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/24(木)",
     "time": "12:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -277,8 +225,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/25(金)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -287,8 +233,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/26(土)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -297,8 +241,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/26(土)",
     "time": "18:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -307,8 +249,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/27(日)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -317,8 +257,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/29(火)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -327,8 +265,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/30(水)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年9月",
@@ -337,8 +273,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "9/30(水)",
     "time": "18:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -347,8 +281,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/1(木)",
     "time": "12:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -357,8 +289,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/2(金)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -367,8 +297,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/3(土)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -377,8 +305,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/3(土)",
     "time": "18:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -387,8 +313,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/4(日)",
     "time": "12:15",
     "harry": "石丸幹二",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -397,8 +321,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/6(火)",
     "time": "12:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -407,8 +329,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/7(水)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -417,8 +337,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/7(水)",
     "time": "18:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -427,8 +345,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/9(金)",
     "time": "12:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -437,8 +353,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/10(土)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -447,8 +361,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/10(土)",
     "time": "18:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -457,8 +369,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/11(日)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -467,8 +377,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/12(月)",
     "time": "12:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -477,8 +385,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/13(火)",
     "time": "13:30",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open special"
   },
   {
     "month": "2026年10月",
@@ -487,8 +393,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/14(水)",
     "time": "17:30",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open special"
   },
   {
     "month": "2026年10月",
@@ -497,8 +401,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/16(金)",
     "time": "12:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -507,8 +409,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/17(土)",
     "time": "13:30",
     "harry": "平岡祐太",
-    "status": "貸切/販売なし",
-    "statusKind": "reserved"
   },
   {
     "month": "2026年10月",
@@ -517,8 +417,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/18(日)",
     "time": "12:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -527,8 +425,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/18(日)",
     "time": "18:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -537,8 +433,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/20(火)",
     "time": "12:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -547,8 +441,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/21(水)",
     "time": "12:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -557,8 +449,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/21(水)",
     "time": "18:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -567,8 +457,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/22(木)",
     "time": "12:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -577,8 +465,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/23(金)",
     "time": "12:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -587,8 +473,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/24(土)",
     "time": "12:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -597,8 +481,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/24(土)",
     "time": "18:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -607,8 +489,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/25(日)",
     "time": "貸切",
     "harry": "藤木直人",
-    "status": "貸切/販売なし",
-    "statusKind": "reserved"
   },
   {
     "month": "2026年10月",
@@ -617,8 +497,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/27(火)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -627,8 +505,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/28(水)",
     "time": "貸切",
     "harry": "平岡祐太",
-    "status": "貸切/販売なし",
-    "statusKind": "reserved"
   },
   {
     "month": "2026年10月",
@@ -637,8 +513,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/28(水)",
     "time": "18:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -647,8 +521,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/30(金)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -657,8 +529,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/31(土)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年10月",
@@ -667,8 +537,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "10/31(土)",
     "time": "18:15",
     "harry": "小野賢章",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -677,8 +545,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/1(日)",
     "time": "12:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -687,8 +553,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/2(月)",
     "time": "12:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -697,8 +561,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/3(火)",
     "time": "12:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -707,8 +569,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/4(水)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -717,8 +577,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/6(金)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -727,8 +585,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/7(土)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -737,8 +593,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/7(土)",
     "time": "18:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -747,8 +601,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/8(日)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -757,8 +609,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/9(月)",
     "time": "12:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -767,8 +617,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/11(水)",
     "time": "13:30",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open special"
   },
   {
     "month": "2026年11月",
@@ -777,8 +625,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/12(木)",
     "time": "12:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -787,8 +633,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/12(木)",
     "time": "18:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -797,8 +641,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/13(金)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -807,8 +649,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/14(土)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -817,8 +657,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/14(土)",
     "time": "18:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -827,8 +665,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/15(日)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -837,8 +673,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/16(月)",
     "time": "12:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -847,8 +681,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/18(水)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -857,8 +689,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/18(水)",
     "time": "18:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -867,8 +697,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/19(木)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -877,8 +705,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/20(金)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -887,8 +713,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/21(土)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -897,8 +721,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/21(土)",
     "time": "18:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -907,8 +729,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/22(日)",
     "time": "12:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -917,8 +737,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/23(月)",
     "time": "12:15",
     "harry": "藤木直人",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -927,8 +745,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/25(水)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -937,8 +753,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/25(水)",
     "time": "18:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -947,8 +761,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/26(木)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -957,8 +769,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/27(金)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -967,8 +777,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/28(土)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -977,8 +785,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/28(土)",
     "time": "18:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年11月",
@@ -987,8 +793,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "11/29(日)",
     "time": "12:15",
     "harry": "平岡祐太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -997,8 +801,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/1(火)",
     "time": "12:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1007,8 +809,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/2(水)",
     "time": "12:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1017,8 +817,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/2(水)",
     "time": "18:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1027,8 +825,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/3(木)",
     "time": "12:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1037,8 +833,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/4(金)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1047,8 +841,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/5(土)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1057,8 +849,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/5(土)",
     "time": "18:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1067,8 +857,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/6(日)",
     "time": "12:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1077,8 +865,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/8(火)",
     "time": "12:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1087,8 +873,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/9(水)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1097,8 +881,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/9(水)",
     "time": "18:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1107,8 +889,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/10(木)",
     "time": "12:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1117,8 +897,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/11(金)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1127,8 +905,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/12(土)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1137,8 +913,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/12(土)",
     "time": "18:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1147,8 +921,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/13(日)",
     "time": "13:30",
     "harry": "藤原竜也",
-    "status": "貸切/販売なし",
-    "statusKind": "reserved"
   },
   {
     "month": "2026年12月",
@@ -1157,8 +929,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/15(火)",
     "time": "12:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1167,8 +937,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/15(火)",
     "time": "18:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1177,8 +945,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/16(水)",
     "time": "12:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1187,8 +953,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/17(木)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1197,8 +961,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/18(金)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1207,8 +969,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/19(土)",
     "time": "12:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1217,8 +977,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/19(土)",
     "time": "18:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1227,8 +985,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/20(日)",
     "time": "12:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1237,8 +993,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/22(火)",
     "time": "12:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1247,8 +1001,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/23(水)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1257,8 +1009,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/23(水)",
     "time": "18:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1267,8 +1017,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/24(木)",
     "time": "12:15",
     "harry": "上野聖太",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1277,8 +1025,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/25(金)",
     "time": "12:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1287,8 +1033,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/25(金)",
     "time": "18:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1297,8 +1041,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/26(土)",
     "time": "12:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1307,8 +1049,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/27(日)",
     "time": "12:15",
     "harry": "稲垣吾郎",
-    "status": "販売対象",
-    "statusKind": "open"
   },
   {
     "month": "2026年12月",
@@ -1317,8 +1057,6 @@ const dailyRows: DailyRow[] = [
     "dateLabel": "12/27(日)",
     "time": "18:15",
     "harry": "藤原竜也",
-    "status": "販売対象",
-    "statusKind": "open"
   }
 ];
 
@@ -1603,7 +1341,1180 @@ const otherCastMonths: OtherCastMonth[] = [
   }
 ];
 
-const seatTypes = ["SS席", "Sプラス席", "S席", "A席", "B席", "9と4分の3番線シート"];
+const seatTypes = ["SS席", "Sプラス席", "S席", "A席", "B席", "C席", "9と4分の3番線シート"];
+
+const seatAvailability: Record<string, Record<string, boolean>> = {
+  "2026-09-02-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-03-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-04-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-05-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-05-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-06-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-08-13:30": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-09-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-09-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-11-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-12-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-12-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-13-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-15-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-16-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-16-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-17-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-18-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-19-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-19-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-20-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-22-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-22-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-23-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-24-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-25-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-26-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-26-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-27-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": false,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-29-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-30-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-09-30-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-01-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-02-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-03-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-03-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-04-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": true,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-06-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-07-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-07-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-09-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-10-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-10-18:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-11-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-12-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-13-13:30": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-14-17:30": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-16-12:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-17-13:30": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-18-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-18-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-20-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-21-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-21-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-22-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-23-12:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": false,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-24-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-24-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-25-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-27-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-28-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-28-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-30-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-31-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": false,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-10-31-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-01-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-02-12:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-03-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-04-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-06-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-07-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-07-18:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-08-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-09-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-11-13:30": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-12-12:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-12-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-13-12:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-14-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-14-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-15-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-16-12:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-18-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-18-18:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-19-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-20-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": false,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-21-12:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-21-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-22-12:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-23-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-25-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-25-18:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-26-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": false,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-27-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-28-12:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-28-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-11-29-12:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-01-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-02-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-02-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-03-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-04-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-05-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-05-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-06-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-08-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-09-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-09-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": true,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-10-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-11-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-12-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-12-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-13-13:30": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-15-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-15-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-16-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-17-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-18-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-19-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-19-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-20-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-22-12:15": {
+    "SS席": true,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-23-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-23-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": true,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-24-12:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": true,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-25-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-25-18:15": {
+    "SS席": false,
+    "Sプラス席": true,
+    "S席": true,
+    "A席": true,
+    "B席": true,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-26-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-27-12:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  },
+  "2026-12-27-18:15": {
+    "SS席": false,
+    "Sプラス席": false,
+    "S席": false,
+    "A席": false,
+    "B席": false,
+    "C席": false,
+    "9と4分の3番線シート": false
+  }
+};
 
 const links = [
   {
@@ -1620,16 +2531,12 @@ const links = [
   },
 ];
 
-function getSeatStatus(row: DailyRow) {
-  if (row.statusKind.includes("reserved") || row.statusKind.includes("none")) {
-    return seatTypes.map((seat) => ({ seat, label: "販売なし", tone: "sold" }));
-  }
-
-  return seatTypes.map((seat) => ({ seat, label: "要確認", tone: "check" }));
-}
-
 function getOtherCasts(month: string) {
   return otherCastMonths.find((item) => item.month === month)?.casts ?? [];
+}
+
+function getSeatAvailability(row: DailyRow) {
+  return seatAvailability[row.date + "-" + row.time] ?? {};
 }
 
 export default function Home() {
@@ -1656,36 +2563,23 @@ export default function Home() {
               <tr>
                 <th>日付</th>
                 <th>開演</th>
-                <th>販売</th>
-                <th>ハリー役</th>
-                <th>席種別</th>
-                <th>他キャスト</th>
+                <th>キャスト</th>
+                {seatTypes.map((seat) => (
+                  <th key={seat}>{seat}</th>
+                ))}
               </tr>
             </thead>
             <tbody>
               {dailyRows.map((row) => {
-                const seatStatus = getSeatStatus(row);
-                const isUnavailable = seatStatus.every((seat) => seat.tone === "sold");
+                const seats = getSeatAvailability(row);
+                const isSoldOut = seatTypes.every((seat) => seats[seat] === false);
                 return (
-                  <tr className={isUnavailable ? "isSold" : undefined} key={row.date + row.time}>
+                  <tr className={isSoldOut ? "isSold" : undefined} key={row.date + row.time}>
                     <td><strong>{row.dateLabel}</strong></td>
                     <td>{row.time}</td>
                     <td>
-                      <span className={"statusBadge " + (isUnavailable ? "sold" : "open")}>{row.status}</span>
-                    </td>
-                    <td>{row.harry}</td>
-                    <td>
-                      <div className="seatGrid">
-                        {seatStatus.map((seat) => (
-                          <span className={"seatChip " + seat.tone} key={seat.seat}>
-                            <b>{seat.seat}</b>{seat.label}
-                          </span>
-                        ))}
-                      </div>
-                    </td>
-                    <td>
                       <details className="castDetails">
-                        <summary>役一覧</summary>
+                        <summary>{row.harry}</summary>
                         <div className="castPanel">
                           <p><b>ハリー</b>{row.harry}</p>
                           {getOtherCasts(row.month).map((cast) => (
@@ -1696,6 +2590,14 @@ export default function Home() {
                         </div>
                       </details>
                     </td>
+                    {seatTypes.map((seat) => {
+                      const available = seats[seat] === true;
+                      return (
+                        <td className={available ? "seatMark ok" : "seatMark ng"} key={seat}>
+                          {available ? "○" : "×"}
+                        </td>
+                      );
+                    })}
                   </tr>
                 );
               })}

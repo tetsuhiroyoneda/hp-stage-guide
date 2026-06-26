@@ -8,9 +8,8 @@
   --paper: #fffdf8;
   --ink: #151515;
   --open: #0f6b4f;
-  --check: #705626;
-  --sold: #777777;
   --sold-bg: #e3e3e3;
+  --ng: #8a8a8a;
 }
 
 @theme inline {
@@ -106,7 +105,7 @@ summary {
 
 .scheduleTable {
   width: 100%;
-  min-width: 1120px;
+  min-width: 900px;
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -125,12 +124,16 @@ summary {
   white-space: nowrap;
 }
 
+.scheduleTable th:nth-child(n + 4) {
+  text-align: center;
+}
+
 .scheduleTable td {
   border-bottom: 1px solid #ebe5dc;
-  padding: 12px 14px;
+  padding: 10px 12px;
   color: #222222;
   line-height: 1.45;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .scheduleTable tr.isSold td {
@@ -151,74 +154,7 @@ summary {
 }
 
 .scheduleTable td:nth-child(3) {
-  width: 170px;
-}
-
-.scheduleTable td:nth-child(4) {
-  width: 120px;
-  font-weight: 900;
-}
-
-.scheduleTable td:nth-child(6) {
-  width: 120px;
-}
-
-.statusBadge {
-  display: inline-flex;
-  min-height: 28px;
-  align-items: center;
-  border-radius: 999px;
-  padding: 0 10px;
-  color: #ffffff;
-  font-size: 0.78rem;
-  font-weight: 900;
-  white-space: nowrap;
-}
-
-.statusBadge.open {
-  background: var(--open);
-}
-
-.statusBadge.sold {
-  background: var(--sold);
-}
-
-.seatGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 6px;
-}
-
-.seatChip {
-  display: grid;
-  gap: 2px;
-  min-height: 44px;
-  border: 1px solid #d7cec1;
-  border-radius: 6px;
-  padding: 7px 8px;
-  background: #fffaf0;
-  color: #4d4539;
-  font-size: 0.75rem;
-}
-
-.seatChip b {
-  color: #201d19;
-  font-size: 0.78rem;
-}
-
-.seatChip.check {
-  border-color: #d6bd78;
-  background: #fff6dc;
-}
-
-.seatChip.sold {
-  border-color: #c4c4c4;
-  background: #d9d9d9;
-  color: #666666;
-}
-
-.seatChip.sold b {
-  color: #555555;
+  width: 150px;
 }
 
 .castDetails {
@@ -234,7 +170,8 @@ summary {
   border-radius: 6px;
   padding: 0 10px;
   background: #ffffff;
-  font-size: 0.82rem;
+  color: var(--ink);
+  font-size: 0.86rem;
   font-weight: 900;
   list-style: none;
   white-space: nowrap;
@@ -279,6 +216,21 @@ summary {
   color: #6b4e19;
 }
 
+.seatMark {
+  width: 74px;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.seatMark.ok {
+  color: var(--open);
+}
+
+.seatMark.ng {
+  color: var(--ng);
+}
+
 @media (max-width: 900px) {
   .pageShell {
     width: min(100% - 20px, 1480px);
@@ -299,10 +251,6 @@ summary {
   }
 
   .scheduleTable {
-    min-width: 1040px;
-  }
-
-  .seatGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-width: 860px;
   }
 }
