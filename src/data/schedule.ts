@@ -7,7 +7,7 @@ export type DailyRow = {
   harry: string;
 };
 
-export const crawledAt = "2026年8月5日 11:40 JST";
+export const crawledAt = "2026年8月5日 23:12 JST";
 
 export const dailyRows: DailyRow[] = [
   {
@@ -1165,8 +1165,8 @@ export const seatAvailability: Record<string, Record<string, boolean>> = {
   },
   "2026-09-11-12:15": {
     "SS席": false,
-    "Sプラス席": true,
-    "S席": true,
+    "Sプラス席": false,
+    "S席": false,
     "A席": true,
     "B席": true,
     "C席": false,
@@ -1678,7 +1678,7 @@ export const seatAvailability: Record<string, Record<string, boolean>> = {
   },
   "2026-11-02-12:15": {
     "SS席": true,
-    "Sプラス席": true,
+    "Sプラス席": false,
     "S席": true,
     "A席": true,
     "B席": true,
@@ -1813,7 +1813,7 @@ export const seatAvailability: Record<string, Record<string, boolean>> = {
   },
   "2026-11-16-12:15": {
     "SS席": true,
-    "Sプラス席": true,
+    "Sプラス席": false,
     "S席": false,
     "A席": true,
     "B席": true,
