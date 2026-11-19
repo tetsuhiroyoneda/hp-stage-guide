@@ -7,7 +7,7 @@ export type DailyRow = {
   harry: string;
 };
 
-export const crawledAt = "2026年11月19日 05:08 JST";
+export const crawledAt = "2026年11月19日 15:27 JST";
 
 export const dailyRows: DailyRow[] = [
   {
